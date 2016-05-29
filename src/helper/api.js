@@ -1,8 +1,8 @@
-const request = require('request')
-const config = require('../config')
-const CacheLite = require('cache-lite')
+import request from 'request'
+import * as config from '../config'
+import CacheLite from 'cache-lite'
 
-module.exports = class Api {
+export class Api {
 
   /**
    * Constructor

@@ -1,13 +1,14 @@
 #! /usr/bin/env node
-const ora = require('ora')
-const url = require('url')
-const chalk = require('chalk')
-const vorpal = require('vorpal')()
-const openurl = require('openurl')
-const helper = require('./helper/array')
-const HelperApi = require('./helper/api')
+import ora from 'ora'
+import url from 'url'
+import chalk from 'chalk'
+import vorp from 'vorpal'
+import openurl from 'openurl'
+import { Api } from './helper/api'
+import { sortByOrder } from './helper/array'
 
-const api = new HelperApi()
+const vorpal = vorp()
+const api = new Api()
 
 /**
  * Get Elapsed Time from posted News to now
@@ -29,7 +30,7 @@ const getElapsedTime = (newsTimeStamp) => {
  */
 const displayNews = (vp, topNewsList) => {
   topNewsList
-    .sort(helper.sortByOrder)
+    .sort(sortByOrder)
     .forEach((item) => {
       const ItemVM = {
         title: chalk.cyan(item.title),

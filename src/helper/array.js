@@ -4,7 +4,7 @@
  * @param {number} order b
  * @return {number}
  */
-exports.sortByOrder = (a, b) => {
+export const sortByOrder = (a, b) => {
   if (a.order > b.order) {
     return 1;
   }
