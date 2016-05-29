@@ -1,6 +1,6 @@
 # Hacker news reader [![CircleCI](https://circleci.com/gh/jsnomad/hacker-news-reader.svg?style=svg)](https://circleci.com/gh/jsnomad/hacker-news-reader)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jsnomad/hacker-news-reader/master/demo.gif" alt="demo" />
+  <img src="https://raw.githubusercontent.com/jsnomad/hacker-news-reader/master/demo.gif" alt="demo" height=340 width=492 />
 </p>
 ## Description
 Read hackers news in your terminal
