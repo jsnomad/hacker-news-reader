@@ -74,7 +74,7 @@ vorpal
       spinner.stop()
       displayNews(this, topNewsList)
       callback()
-    }).catch((err) => callback())
+    }).catch(() => callback())
   })
 
 /**
