@@ -1,8 +1,8 @@
-const chai = require('chai');
-const HelperApi = require('../app/helper/api');
+import { expect, should } from 'chai'
+import { Api } from '../src/helper/api'
 
-chai.should();
-const api = new HelperApi()
+should();
+const api = new Api()
 
 describe('News API Helper', () => {
   it('should return news', (done) => {
