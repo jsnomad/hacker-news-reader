@@ -1,11 +1,14 @@
 {
   "name": "hacker-news-reader",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Hacker News Reader CLI",
-  "main": "app/",
+  "main": "lib/",
   "scripts": {
-    "lint": "eslint ./app",
-    "test": "npm run lint && mocha --timeout 15000"
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "lint": "eslint ./src",
+    "mocha": "mocha --timeout 15000 --compilers js:babel-register --require babel-polyfill",
+    "test": "npm run lint && npm run mocha"
   },
   "keywords": [
     "hacker-news",
@@ -13,7 +16,7 @@
     "cli"
   ],
   "bin": {
-    "hnr": "./app/index.js"
+    "hnr": "./lib/index.js"
   },
   "preferGlobal": true,
   "author": "thomas.blanc.hector@gmail.com",
@@ -27,6 +30,11 @@
     "cache-lite": "0.0.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-eslint": "^6.0.0",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
     "chai": "^3.5.0",
     "eslint": "^2.8.0",
     "eslint-config-airbnb-base": "^1.0.4",
