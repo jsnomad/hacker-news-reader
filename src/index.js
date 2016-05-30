@@ -3,7 +3,7 @@ import ora from 'ora'
 import url from 'url'
 import chalk from 'chalk'
 import vorp from 'vorpal'
-import openurl from 'openurl'
+import open from 'open'
 import { Api } from './helper/api'
 import { sortByOrder } from './helper/array'
 
@@ -54,7 +54,7 @@ const openNews = (order, vp) => {
   if (typeof (order) === 'number') {
     const selectedNews = api.getTopNewsList.find((news) => news.order === order)
     if (selectedNews) {
-      openurl.open(selectedNews.url)
+      open(selectedNews.url)
     } else {
       vp.log(chalk.red('This news doesn\'t exist'));
     }
