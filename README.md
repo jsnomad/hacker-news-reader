@@ -27,5 +27,9 @@ npm install hacker-news-reader -g
 ## Requirement
 Node >= 4.0
 
+## Compatibility
+OSX/Unix
+Windows Soon
+
 ## License
 MIT &copy; [Thomas Blanc-Hector](https://github.com/jsnomad)
