@@ -1,6 +1,6 @@
 {
   "name": "hacker-news-reader",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hacker News Reader CLI",
   "main": "lib/",
   "scripts": {
@@ -22,12 +22,12 @@
   "author": "thomas.blanc.hector@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "cache-lite": "0.0.3",
     "chalk": "^1.1.3",
-    "openurl": "^1.1.1",
+    "open": "0.0.5",
     "ora": "^0.2.1",
     "request": "^2.72.0",
-    "vorpal": "^1.10.10",
-    "cache-lite": "0.0.3"
+    "vorpal": "^1.10.10"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
