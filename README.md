@@ -5,7 +5,7 @@
 </p>
 
 ## Description
-Read hackers news from your terminal
+Read hackers news on your terminal
 
 ## Download
 The source is available for download from
