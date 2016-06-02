@@ -28,13 +28,13 @@ const getElapsedTime = (newsTimeStamp) => {
  * Display News in terminal
  * @param {object} Vorpal Object
  */
-const displayNews = (vp, topNewsList) => {
+const displayNews = (topNewsList, vp) => {
   topNewsList
     .sort(sortByOrder)
     .forEach((item) => {
       const ItemVM = {
         title: chalk.cyan(item.title),
-        hostname: url.parse(item.url).hostname,
+        hostname: (item.url) ? url.parse(item.url).hostname : '',
         score: chalk.green(`${item.score} points`),
         by: chalk.gray(`By ${item.by}`),
         time: chalk.white(getElapsedTime(item.time)),
@@ -73,7 +73,7 @@ vorpal
     spinner.start()
     api.getTopNews().then((topNewsList) => {
       spinner.stop()
-      displayNews(this, topNewsList)
+      displayNews(topNewsList, this)
       callback()
     }).catch(() => callback())
   })
